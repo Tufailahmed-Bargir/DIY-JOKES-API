@@ -1,8 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 const app = express();
-const port = 8001;
+const port = process.env.PORT||8001;
 const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 
 app.use(bodyParser.urlencoded({ extended: true }));
