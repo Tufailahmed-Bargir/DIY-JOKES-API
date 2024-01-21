@@ -121,9 +121,10 @@ app.delete('/all',function(req,res){
  
  })
 
-app.listen(port, () => {
-  console.log(`Successfully started server on port ${port}.`);
-});
+// app.listen(port, () => {
+//   console.log(`Successfully started server on port ${port}.`);
+// });
+module.exports = app;
 
 var jokes = [
   {
