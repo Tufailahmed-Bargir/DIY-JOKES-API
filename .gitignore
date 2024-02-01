@@ -1,1 +1,6 @@
 /node_modules
+/database.js
+/index.js
+/package-lock.json
+/pre-final tools.txt
+/test.js

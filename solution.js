@@ -3,11 +3,20 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 const app = express();
+app.use(cors())
 const port = process.env.PORT||8001;
 const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
+// get all jokes
+app.get("/", (req, res) => {
+  
+  res.render('index.ejs');
+});
+app.get("/all", (req, res) => {
+  
+  res.json(jokes);
+});
 //Get a random joke
 app.get("/random", (req, res) => {
   const randomIndex = Math.floor(Math.random() * jokes.length);
